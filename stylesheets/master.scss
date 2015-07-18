@@ -8,7 +8,15 @@ body {
 body {
     font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
+a {
+  color: #55b879;
 
+}
+a:hover,
+a:focus,
+a:active {
+  color: #4da56c;
+}
 .quote{
   text-align: center;
   padding-top: 15rem;
