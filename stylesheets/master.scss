@@ -36,15 +36,16 @@ a:active {
 
 /* Custom Button Styles */
 .btn-shade {
+  padding: 15px;
   border-radius: 0;
   color: #fff;
-  background-color: rgba(0,0,0,0.4);
+  background-color: #55b879;
 }
 .btn-shade:hover,
 .btn-shade:focus,
 .btn-shade:active {
   color: #fff;
-  background-color: rgba(0,0,0,0.7);
+  background-color: #55b870;
 }
 .btn-light {
   border-radius: 0;
@@ -134,8 +135,7 @@ hr.small {
 .portfolio h4 {
   text-align: left;
   font-weight: bold;
-  margin: 2rem;
-  margin: 3rem;
+margin-top: 2em;
 }
 .location-section {
   padding-top: 5rem;
