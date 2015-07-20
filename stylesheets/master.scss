@@ -7,7 +7,7 @@ body {
   font-family: "Source Sans Pro","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 a {
-  color: #55b879;
+  color: #39b54a;
 }
 a:hover,
 a:focus,
@@ -16,16 +16,21 @@ a:active {
 }
 .quote {
   text-align: center;
-  padding: 15rem 10rem;
+  //padding: 15rem 10rem;
   background-color: #e6e6e6;
   h2 {
+    padding: 15rem;
     color: gray;
+    font-weight: 100;
   }
 }
 .text-vertical-center {
-  display: table-cell;
+  //display: table-cell;
   text-align: center;
-  vertical-align: middle;
+  //vertical-align: middle;
+  //width: 400px;
+  padding: 20%;
+  margin-top: -18%;
 }
 .text-vertical-center h1 {
   margin: 0;
@@ -39,13 +44,13 @@ a:active {
   padding: 15px;
   border-radius: 0;
   color: #fff;
-  background-color: #55b879;
+  background-color: #2cdd44;
 }
 .btn-shade:hover,
 .btn-shade:focus,
 .btn-shade:active {
   color: #fff;
-  background-color: #55b870;
+  background-color: #2fed48;
 }
 .btn-light {
   border-radius: 0;
@@ -77,7 +82,7 @@ hr.small {
   position: relative;
   width: 100%;
   height: 100%;
-  background: url("../img/bg.jpg") no-repeat center center scroll;
+  background: url("../img/bg_image_dark.jpg") no-repeat center center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -86,12 +91,14 @@ hr.small {
 
 /* About */
 .about {
-  padding: 50px 0;
+  //padding: 50px 0;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
 }
 
 /* Services */
 .sponsors {
-  background-color: #55b879;
+  background-color: #39b54a;
   padding: 50px 0;
 }
 .service-item {
@@ -135,7 +142,8 @@ hr.small {
 .portfolio h4 {
   text-align: left;
   font-weight: bold;
-margin-top: 2em;
+  margin-top: 3em;
+  color: #5e5e5e;
 }
 .location-section {
   padding-top: 5rem;
@@ -168,5 +176,6 @@ margin-top: 2em;
 
 /* Footer */
 footer {
+  background-color:#f1f1f1;
   padding: 100px 0;
 }
