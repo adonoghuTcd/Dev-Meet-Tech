@@ -14,6 +14,29 @@ a:focus,
 a:active {
   color: #4da56c;
 }
+.header img {
+  margin: 0 auto;
+ width: 800px;
+ display: block;
+ max-width: 100%;
+  height: auto; }
+
+.margin-0 {
+  margin-right: 0;
+  margin-left: 0; }
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+ height: 0; }
+
+* html .clearfix {
+ zoom: 1; }
+ /* IE6 */
+ *:first-child + html .clearfix {
+   zoom: 1; }
 .quote {
   text-align: center;
   //padding: 15rem 10rem;
@@ -160,6 +183,7 @@ hr.small {
     z-index: 99;
   }
   .location-description {
+    padding-top: 20px;
     font-size: 1.5em;
     text-align: center;
     color: #78a300;
@@ -168,11 +192,11 @@ hr.small {
 .map {
   height: 400px;
 }
-@media(max-width:768px) {
+@media (max-width: 768px) {
   .map {
-    height: 75%;
-  }
-}
+    height: 75%; }
+  .quote h2 {
+    padding: 1rem; } }
 
 /* Footer */
 footer {
