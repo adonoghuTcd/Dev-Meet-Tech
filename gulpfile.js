@@ -9,9 +9,8 @@ var gulp =        require('gulp'),
 gulp.task('css', function() {
   gulp.src('stylesheets/master.scss')
       .pipe(sass())
-      .pipe(prefixer({Remove: false}))
-      
-      /*.pipe(minify({ cache: true }))*/
+      .pipe(prefixer())
+      .pipe(minify({ cache: true }))
       .pipe(gulp.dest('./css'))
 })
 
