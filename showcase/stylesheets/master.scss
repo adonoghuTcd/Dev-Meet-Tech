@@ -527,5 +527,9 @@ p {
 }
 
 .team__anchor_link {
-  color: #C0C0FF;
+  color: #ffffff;
+  &:hover {
+    color: #d8d8d8;
+    text-decoration: none;
+  }
 }
