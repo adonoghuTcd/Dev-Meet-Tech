@@ -273,9 +273,10 @@ footer {
   background-color: #e6e6e6;
 }
 
-.first-event
+.event-bubble
 {
   margin: 0 auto;
+  margin-top: 10px;
   display:block;
   width:200px;
   height:200px;
@@ -286,9 +287,16 @@ footer {
   text-align:center;
   text-decoration:none;
   background: url("http://i.imgur.com/4OnhFAF.png");
+  @media (max-width: 768px) {
+    width:100px;
+    height:100px;
+    border-radius:50px;
+    font-size:16px;
+    line-height:100px;
+  }
 }
 
-.first-event:hover
+.event-bubble:hover
 {
   color:#2cdd44;
   text-decoration:none;
