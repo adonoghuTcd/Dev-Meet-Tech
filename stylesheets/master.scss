@@ -273,7 +273,7 @@ footer {
   background-color: #e6e6e6;
 }
 
-.event-bubble
+.event-bubble-pilot
 {
   margin: 0 auto;
   margin-top: 10px;
@@ -296,7 +296,37 @@ footer {
   }
 }
 
-.event-bubble:hover
+.event-bubble-pilot:hover
+{
+  color:#2cdd44;
+  text-decoration:none;
+  opacity: 0.7;
+}
+
+.event-bubble-launchpad
+{
+  margin: 0 auto;
+  margin-top: 10px;
+  display:block;
+  width:200px;
+  height:200px;
+  border-radius:100px;
+  font-size:20px;
+  color:gray;
+  line-height:200px;
+  text-align:center;
+  text-decoration:none;
+  background: url("http://i.imgur.com/Yk4Ls6E.png");
+  @media (max-width: 768px) {
+    width:100px;
+    height:100px;
+    border-radius:50px;
+    font-size:16px;
+    line-height:100px;
+  }
+}
+
+.event-bubble-launchpad:hover
 {
   color:#2cdd44;
   text-decoration:none;

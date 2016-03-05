@@ -1,20 +1,21 @@
 {
-  "name": "devmeettech-showcase",
+  "name": "dev-meet-tech",
   "private": true,
-  "version": "0.0.1",
-  "description": "Show case the Dev, meet Tech participants projects.",
+  "version": "1.0.1",
+  "description": "Bringing people of diverse backgrounds together",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Johan Brook <johanbrook.com>",
+  "author": "Dev Meet Tech",
   "license": "MIT",
   "devDependencies": {
+    "browser-sync": "^2.11.1",
     "gravatar": "^1.1.0",
-    "gulp": "^3.8.9",
+    "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.0.0",
     "gulp-minify-css": "^0.3.11",
     "gulp-rename": "^1.2.0",
-    "gulp-sass": "^1.1.0",
+    "gulp-sass": "^2.1.1",
     "html-linkify": "^1.2.0"
   }
 }
