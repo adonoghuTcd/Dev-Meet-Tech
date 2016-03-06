@@ -17,7 +17,7 @@ gulp.task('watch', ['css'], function(gulpCallback) {
     open: true
   }, function callback() {
 
-    gulp.watch('/launchpad.html', browserSync.reload);
+    gulp.watch('launchpad.html', browserSync.reload);
     gulp.watch('./stylesheets/*.scss', ['css']);
 
     gulpCallback();

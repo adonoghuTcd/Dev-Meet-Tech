@@ -234,13 +234,16 @@ p {
 }
 
 .section-story {
-  margin-bottom: 6rem;
+  margin-bottom: 0rem;
 }
 
 .section-teams {
   max-width: 1680px;
   margin: 0 auto;
-  p{
+  h1 {
+    padding-bottom:4rem;
+  }
+  p {
     color:#ffffff;
   }
 }
@@ -322,7 +325,7 @@ p {
 .story__ending {
   text-align: center;
   font-style: italic;
-  min-height: 70vh;
+  min-heht: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -339,7 +342,7 @@ p {
 
   .highlight {
     max-width: none;
-    margin: 2rem auto;
+    margin: 1rem auto;
     font-size: 4rem;
   }
 

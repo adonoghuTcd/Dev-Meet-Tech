@@ -234,12 +234,15 @@ p {
 }
 
 .section-story {
-  margin-bottom: 6rem;
+  margin-bottom: 0rem;
 }
 
 .section-teams {
   max-width: 1680px;
   margin: 0 auto;
+  h1 {
+    padding-bottom:4rem;
+  }
   p{
     color:#ffffff;
   }
