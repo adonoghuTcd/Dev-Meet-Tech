@@ -1,0 +1,151 @@
+<html>
+<head>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <link rel='stylesheet', href = 'https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/paper/bootstrap.min.css'>
+
+  <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans|Raleway" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Lato', sans-serif;
+      font-family: 'Raleway', sans-serif;
+      font-family: 'Open Sans', sans-serif;
+      width:2000px;
+      margin: 10px;
+    }
+  </style>
+  
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['gantt']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function daysToMilliseconds(days) {
+      return days * 24 * 60 * 60 * 1000;
+    }
+
+    function drawChart() {
+
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Task ID');
+      data.addColumn('string', 'Task Name');
+      data.addColumn('string', 'Resource');
+      data.addColumn('date', 'Start Date');
+      data.addColumn('date', 'End Date');
+      data.addColumn('number', 'Duration');
+      data.addColumn('number', 'Percent Complete');
+      data.addColumn('string', 'Dependencies');
+
+      data.addRows([
+        ['Capstone_Technology', 'Capstone Thesis Technology', 'Capstone Thesis',
+        new Date(2016, 6, 1), new Date(2016, 9, 7), null,  20,  null],
+        ['Capstone_Validation', 'Capstone Thesis Customer Validation', 'Capstone Thesis',
+         new Date(2016, 8, 7), new Date(2017, 1, 3), null, 0, 'Capstone_Technology'],
+        ['Capstone_Competitors', 'Capstone Thesis Competitive & IP Analysis', 'Capstone Thesis',
+        new Date(2016, 8, 7), new Date(2016, 11, 7), null, 0, 'Capstone_Technology'],
+        ['Capstone_Launch', 'Capstone Thesis Launch Strategy', 'Capstone Thesis',
+         new Date(2016, 11, 7), new Date(2017, 3, 14), null, 0, 'Capstone_Competitors'],
+        ['Capstone_Financials', 'Capstone Thesis Financials', 'Capstone Thesis',
+         new Date(2017, 0, 9), new Date(2017, 3, 14), null, 0, 'Capstone_Competitors'],
+
+        ['ProductDev', 'Product Dev Job Search', 'Career Dev',
+        new Date(2016, 6, 1), new Date(2016, 6, 16), null,  80,  null],
+        ['Consulting', 'Consulting Job Search', 'Career Dev',
+         new Date(2016, 6, 17), new Date(2016, 6, 30), null, 20, 'ProductDev'],
+        ['Startups', 'Startup Job Search', 'Career Dev',
+        new Date(2016, 7, 1), new Date(2016, 7, 10), null, 0, 'Consulting'],
+        ['Tech', 'Tech Job Search', 'Career Dev',
+         new Date(2016, 7, 10), new Date(2016, 7, 20), null, 0, 'Startups'],
+        ['Interviews', 'Behaviourial Interviews', 'Career Dev',
+         new Date(2016, 8, 1), new Date(2016, 9, 30), null, 0, 'Tech'],
+         ['Job', 'Finalise Job', 'Career Dev',
+         new Date(2016, 10, 1), new Date(2016, 11, 10), null, 0, 'Interviews'],
+        ['McClosky_Round1', 'McClosky Round 1', 'Career Dev',
+         new Date(2016, 8, 1), new Date(2016, 10, 1), null, 0, null],
+        ['McClosky_Round2', 'McClosky Round 2', 'Career Dev',
+         new Date(2016, 10, 28), new Date(2017, 1, 19), null, 0, 'McClosky_Round1'],
+        ['McClosky_Semi', 'McClosky Semi Final', 'Career Dev',
+         new Date(2017, 2, 13), new Date(2017, 2, 29), null, 0, 'McClosky_Round2'],
+        ['McClosky_Final', 'McClosky Final', 'Career Dev',
+         new Date(2017, 3, 20), new Date(2017, 3, 21), null, 0, 'McClosky_Semi'],
+        ['Consulting_Workshops', 'Consulting Workshops', 'Career Dev',
+         new Date(2016, 7, 31), new Date(2016, 8, 2), null, 0, 'Consulting'],
+        ['Fall_Career_Fair', 'Fall Career Fair', 'Career Dev',
+         new Date(2016, 8, 7), new Date(2016, 8, 8), null, 0, 'Tech'],
+
+        ['Summer_Semester_Orientation', 'Summer Semester Orientation', 'Academic Year',
+         new Date(2016, 5, 22), new Date(2016, 5, 24), null, 100, null],
+        ['Summer_Semester', 'Summer Semester', 'Academic Year',
+         new Date(2016, 5, 27), new Date(2016, 7, 5), null, 80, 'Summer_Semester_Orientation'],
+        ['Fall_Semester', 'Fall Semester', 'Academic Year',
+         new Date(2016, 7, 23), new Date(2016, 11, 8), null, 0, 'Summer_Semester'],
+        ['Fall_Semester_Finals', 'Fall Semester Finals', 'Academic Year',
+         new Date(2016, 11, 12), new Date(2016, 11, 16), null, 0, 'Fall_Semester'],
+        ['Spring_Semester', 'Spring Semester', 'Academic Year',
+         new Date(2017, 0, 17), new Date(2017, 4, 3), null, 0, 'Fall_Semester_Finals'],
+        ['Spring_Semester_Finals', 'Spring Semester Finals', 'Academic Year',
+         new Date(2017, 4, 8), new Date(2017, 4, 12), null, 0, 'Spring_Semester'],
+
+        ['Summer', 'Summer Break', 'Hols',
+         new Date(2016, 7, 6), new Date(2016, 7, 22), null, 0, null],
+        ['Fall_MidTerm', 'Fall Midterm Break', 'Hols',
+         new Date(2016, 9, 15), new Date(2016, 9, 23), null, 0, 'Summer'],
+        ['Thanksgiving', 'Thanksgiving Break', 'Hols',
+         new Date(2016, 10, 23), new Date(2016, 10, 27), null, 0, 'Fall_MidTerm'],
+        ['Fall', 'Fall Break', 'Hols',
+         new Date(2016, 11, 17), new Date(2017, 0, 17), null, 0, 'Thanksgiving'],
+        ['Spring', 'Spring Break', 'Hols',
+         new Date(2017, 2, 11), new Date(2017, 2, 19), null, 0, 'Fall'],
+        ['Easter', 'Easter Holiday', 'Hols',
+         new Date(2017, 3, 14), new Date(2017, 3, 17), null, 0, 'Spring'],
+        ['Commencement', 'Commencement Weekend', 'Hols',
+         new Date(2017, 4, 19), new Date(2017, 4, 21), null, 0, 'Easter'],
+
+        ['Volunpeer_MVP', 'Volunpeer MVP', 'Volunpeer',
+         new Date(2016, 6, 1), new Date(2016, 10, 14), null, 0, null],
+        ['Volunpeer_Static_Site', 'Volunpeer Static Site', 'Volunpeer',
+         new Date(2016, 6, 1), new Date(2016, 8, 14), null, 0, null],
+        ['Team_Feedback', 'Volunpeer Team Feedback', 'Volunpeer',
+         new Date(2016, 10, 16), new Date(2016, 10, 30), null, 0, 'Volunpeer_MVP, Volunpeer_Static_Site'],
+        ['ReEvaluate_MVP', 'Volunpeer Re-Evaluated MVP', 'Volunpeer',
+         new Date(2016, 11, 1), new Date(2017, 1, 28), null, 0, 'Team_Feedback'],
+
+        ['Qanda_MVP', 'Qanda MVP', 'Qanda',
+         new Date(2016, 6, 1), new Date(2016, 7, 14), null, 0, null],
+        ['Qanda_Static_Site', 'Qanda Static Site', 'Qanda',
+         new Date(2016, 6, 20), new Date(2016, 7, 14), null, 0, null],
+        ['Qanda_Feedback', 'Qanda Customer Feedback', 'Qanda',
+         new Date(2016, 7, 16), new Date(2016, 9, 30), null, 0, 'Qanda_MVP, Qanda_Static_Site'],
+        ['Qanda_ReEvaluate_MVP', 'Qanda Re-Evaluated MVP', 'Qanda',
+         new Date(2016, 10, 1), new Date(2017, 0, 14), null, 0, 'Qanda_Feedback'],
+        ['Alpha_Test_MVP', 'Qanda Alpha Test MVP', 'Qanda',
+         new Date(2017, 1, 1), new Date(2017, 4, 3), null, 0, 'Qanda_ReEvaluate_MVP']
+      ]);
+
+      var options = {
+        height: 1800,
+        width: 2600
+      };
+
+      var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
+
+      chart.draw(data, options);
+
+    }
+  </script>
+</head>
+<body>
+  
+  <div id="chart_div"></div>
+
+  <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+  <script src="./js/knockout.js"></script>
+
+  <script src="./js/timetable/gantt_model.js"></script>
+
+</body>
+</html>
